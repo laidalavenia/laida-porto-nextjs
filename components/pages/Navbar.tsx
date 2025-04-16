@@ -26,24 +26,24 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col gap-4 mt-8">
-                <a
-                  href="https://github.com"
+                <Link
+                  href="https://github.com/laidalavenia"
                   className="flex items-center gap-2 p-2"
                 >
                   <Github size={20} /> GitHub
-                </a>
-                <a
-                  href="https://linkedin.com"
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/laidalavenia/"
                   className="flex items-center gap-2 p-2"
                 >
                   <Linkedin size={20} /> LinkedIn
-                </a>
-                <a
-                  href="https://instagram.com"
+                </Link>
+                <Link
+                  href="https://www.instagram.com/laidalav_/"
                   className="flex items-center gap-2 p-2"
                 >
                   <Instagram size={20} /> Instagram
-                </a>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
@@ -51,30 +51,30 @@ const Navbar = () => {
 
         {/* Desktop Social Links */}
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href="https://github.com"
+          <Link
+            href="https://github.com/laidalavenia"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition-colors"
           >
             <Github size={24} />
-          </a>
-          <a
-            href="https://linkedin.com"
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/laidalavenia/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition-colors"
           >
             <Linkedin size={24} />
-          </a>
-          <a
-            href="https://instagram.com"
+          </Link>
+          <Link
+            href="https://www.instagram.com/laidalav_/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition-colors"
           >
             <Instagram size={24} />
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

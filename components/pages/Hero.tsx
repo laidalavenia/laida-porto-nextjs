@@ -56,7 +56,7 @@ export default function HeroSection() {
                       alt="Profile photo"
                     />
                     <AvatarFallback className="bg-gray-800 text-white text-4xl">
-                      FD
+                      LL
                     </AvatarFallback>
                   </Avatar>
                 </div>
