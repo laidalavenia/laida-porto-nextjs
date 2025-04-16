@@ -1,59 +1,70 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
+import { WavyBackground } from "@/components/ui/wavy-background";
+import Navbar from "@/components/pages/Navbar";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export default function ThreeDCardDemo() {
+export default function HeroSection() {
   return (
-    <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white"
-        >
-          Make things float in air
-        </CardItem>
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-        >
-          Hover over this card to unleash the power of CSS perspective
-        </CardItem>
-        <CardItem
-          translateZ="100"
-          rotateX={20}
-          rotateZ={-10}
-          className="w-full mt-4"
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            translateX={-40}
-            as="button"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-          >
-            Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            translateX={40}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Sign up
-          </CardItem>
+    <div className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <WavyBackground className="h-full w-full" waveOpacity={0.3} />
+      </div>
+
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+
+        {/* Main Content */}
+        <div className="flex-grow flex items-center">
+          <div className="container mx-auto px-4 py-20">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+              {/* Developer Info */}
+              <div className="flex flex-col gap-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                  Frontend Developer
+                </h1>
+                <h2 className="text-xl md:text-2xl text-gray-300 mb-4">
+                  Creating beautiful & performant web experiences
+                </h2>
+                <p className="text-gray-400 max-w-md mb-6">
+                  I specialize in building responsive and user-friendly
+                  interfaces with modern frontend technologies like React,
+                  Next.js, and Tailwind CSS.
+                </p>
+                <div className="flex gap-4">
+                  <Button className="bg-white text-black hover:bg-gray-100">
+                    View Projects
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="text-white border-white hover:bg-white/10"
+                  >
+                    Contact Me
+                  </Button>
+                </div>
+              </div>
+
+              {/* Profile Photo */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20"></div>
+                <div className="relative bg-gray-900 border-4 border-gray-700 rounded-full p-1 w-64 h-64 md:w-80 md:h-80 overflow-hidden">
+                  <Avatar className="w-full h-full">
+                    <AvatarImage
+                      src="/api/placeholder/400/400"
+                      alt="Profile photo"
+                    />
+                    <AvatarFallback className="bg-gray-800 text-white text-4xl">
+                      FD
+                    </AvatarFallback>
+                  </Avatar>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </CardBody>
-    </CardContainer>
+      </div>
+    </div>
   );
 }
