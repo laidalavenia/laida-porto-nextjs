@@ -76,6 +76,8 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --font-poppins: 'Poppins', sans-serif;
+  --font-fira-code: 'Fira Code', monospace;
 }
 
 .dark {
@@ -118,5 +120,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-poppins);
   }
+}
+
+.font-fira-code {
+  font-family: var(--font-fira-code);
 }
