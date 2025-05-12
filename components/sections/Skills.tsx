@@ -10,14 +10,13 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 import {
-  SiFramer,
   SiTailwindcss,
   SiVercel,
-  SiRedis,
-  SiDigitalocean,
-  SiAmazon,
-  SiDocker,
+  SiPostman,
 } from "react-icons/si";
+import { IoLogoJavascript, IoLogoHtml5 } from "react-icons/io5";
+import { RiNextjsFill } from "react-icons/ri";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 interface SkillItemProps {
   icon: React.ReactNode;
@@ -52,7 +51,10 @@ const Skills = () => {
   const skillsRow1 = [
     { icon: <FaReact className="text-blue-400" />, name: "React" },
     { icon: <FaVuejs className="text-green-400" />, name: "Vue.js" },
-    { icon: <SiFramer className="text-purple-400" />, name: "Framer Motion" },
+    {
+      icon: <TbBrandFramerMotion className="text-purple-400" />,
+      name: "Framer Motion",
+    },
     { icon: <SiTailwindcss className="text-sky-400" />, name: "Tailwind CSS" },
     { icon: <FaBootstrap className="text-purple-600" />, name: "Bootstrap" },
     { icon: <FaFigma className="text-pink-400" />, name: "Figma" },
@@ -61,13 +63,16 @@ const Skills = () => {
   const skillsRow2 = [
     { icon: <FaGithub className="text-gray-200" />, name: "GitHub" },
     { icon: <SiVercel className="text-white" />, name: "Vercel" },
-    { icon: <SiRedis className="text-red-500" />, name: "Redis" },
+    { icon: <SiPostman className="text-orange-500" />, name: "Postman" },
     {
-      icon: <SiDigitalocean className="text-blue-500" />,
-      name: "Digital Ocean",
+      icon: <RiNextjsFill className="text-white" />,
+      name: "Next.js",
     },
-    { icon: <SiAmazon className="text-yellow-400" />, name: "AWS" },
-    { icon: <SiDocker className="text-blue-400" />, name: "Docker" },
+    {
+      icon: <IoLogoJavascript className="text-yellow-400" />,
+      name: "Javascript",
+    },
+    { icon: <IoLogoHtml5 className="text-orange-500" />, name: "HTML5" },
   ];
 
   return (
@@ -152,7 +157,7 @@ const Skills = () => {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20, 
+                  duration: 20,
                   ease: "linear",
                 },
               }}

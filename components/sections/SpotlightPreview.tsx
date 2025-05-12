@@ -4,6 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "../ui/spotlight";
 
+// example from aceternity ui
 export function SpotlightPreview() {
   return (
     <div className="relative flex h-[40rem] w-full overflow-hidden rounded-md bg-black/[0.96] antialiased md:items-center md:justify-center">
