@@ -9,7 +9,7 @@ import {
   Instagram,
   Menu as MenuIcon,
   CodeXml,
-  User,
+  Brain,
   Mail,
   Briefcase,
 } from "lucide-react";
@@ -53,7 +53,7 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "About", href: "#about", icon: <User size={18} /> },
+    { name: "Skills", href: "#skills", icon: <Brain size={18} /> },
     {
       name: "Experiences",
       href: "#experiences",

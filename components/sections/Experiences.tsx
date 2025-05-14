@@ -2,65 +2,8 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Calendar, Briefcase, GraduationCap, Award } from "lucide-react";
-
-const ExperienceCard = ({
-  title,
-  role,
-  duration,
-  description,
-  icon,
-  isLeft,
-}) => {
-  const cardRef = useRef(null);
-  const isInView = useInView(cardRef, { once: true, margin: "-100px" });
-
-  const Icon = icon;
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-10" ref={cardRef}>
-      {/* Timeline middle bar */}
-      <div className="hidden md:flex md:col-span-2 justify-center">
-        <div className="relative flex h-full w-full items-center justify-center">
-          <div className="h-full w-0.5 bg-gradient-to-b from-purple-500 to-blue-500"></div>
-          <div className="absolute flex h-8 w-8 items-center justify-center rounded-full bg-black border-2 border-purple-500 text-white">
-            <Icon size={16} />
-          </div>
-        </div>
-      </div>
-
-      {/* Content - Alternating layout on desktop */}
-      <motion.div
-        className={`bg-black/30 backdrop-blur-md p-5 rounded-xl border border-gray-800/30 shadow-lg md:col-span-5 ${
-          isLeft ? "md:order-first" : "md:order-last"
-        }`}
-        initial={{ opacity: 0, y: 20, x: isLeft ? -20 : 20 }}
-        animate={isInView ? { opacity: 1, y: 0, x: 0 } : {}}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <div className="flex items-center mb-2 gap-2">
-          <span className="md:hidden flex h-6 w-6 items-center justify-center rounded-full bg-black border border-purple-500 text-white">
-            <Icon size={12} />
-          </span>
-          <h3 className="text-xl font-bold text-white">{title}</h3>
-        </div>
-        <h4 className="text-purple-400 font-medium mb-1">{role}</h4>
-        <div className="flex items-center text-gray-400 text-sm mb-3">
-          <Calendar size={14} className="mr-1" />
-          <span>{duration}</span>
-        </div>
-        <p className="text-gray-300">{description}</p>
-      </motion.div>
-
-      {/* Empty space for alternating layout */}
-      <div
-        className={`hidden md:block md:col-span-5 ${
-          isLeft ? "md:order-last" : "md:order-first"
-        }`}
-      ></div>
-    </div>
-  );
-};
+import { ExperienceCard } from "@/components/experiences/ExperienceCard";
+import { Briefcase, GraduationCap, Award } from "lucide-react";
 
 const Experiences = () => {
   const sectionRef = useRef(null);
@@ -68,40 +11,61 @@ const Experiences = () => {
 
   const experiences = [
     {
-      title: "Tech Company XYZ",
+      title: "Google",
       role: "Senior Frontend Developer",
       duration: "Jan 2022 - Present",
-      description:
-        "Led the development of responsive web applications using React and Next.js. Implemented UI/UX designs with Tailwind CSS and collaborated with cross-functional teams to deliver high-quality solutions.",
+      description: [
+        "Led development of responsive web applications using React and Next.js, improving user engagement by 37%",
+        "Implemented advanced UI/UX designs with Tailwind CSS, resulting in 25% reduction in bounce rates",
+        "Collaborated with cross-functional teams to deliver high-quality solutions, meeting 100% of project deadlines",
+        "Optimized application performance, reducing load time by 40% and increasing conversion rates",
+      ],
       icon: Briefcase,
       isLeft: true,
+      logoSrc: "/assets/images/logo_tan_digital-color.png", 
+      hasWhiteLogoBg: true,
     },
     {
-      title: "Digital Agency ABC",
+      title: "Meta",
       role: "Web Developer",
       duration: "Mar 2020 - Dec 2021",
-      description:
-        "Developed and maintained client websites, created custom themes, and implemented various web animations. Worked closely with designers to ensure pixel-perfect implementations.",
+      description: [
+        "Developed and maintained client websites with 99.9% uptime, serving over 1M monthly users",
+        "Created custom themes and implemented animations that increased user engagement by 28%",
+        "Collaborated with designers to ensure pixel-perfect implementations across all devices",
+        "Implemented responsive designs that improved mobile conversion rates by 45%",
+      ],
       icon: Briefcase,
       isLeft: false,
+      logoSrc: "/api/placeholder/40/40", // Use Meta logo or placeholder
     },
     {
-      title: "University of Technology",
+      title: "MIT",
       role: "Computer Science Degree",
       duration: "2016 - 2020",
-      description:
-        "Graduated with honors in Computer Science with a focus on web technologies and user interface design. Participated in various hackathons and coding competitions.",
+      description: [
+        "Graduated with honors (3.92 GPA) in Computer Science with focus on web technologies",
+        "Completed capstone project developing a full-stack application with 10,000+ users",
+        "Participated in 12+ hackathons, winning 'Best Technical Innovation' award twice",
+        "Served as teaching assistant for Advanced Web Development course for 3 semesters",
+      ],
       icon: GraduationCap,
       isLeft: true,
+      logoSrc: "/api/placeholder/40/40", // Use MIT logo or placeholder
     },
     {
-      title: "Web Innovation Awards",
-      role: "Best Portfolio Design",
+      title: "Adobe",
+      role: "Best Portfolio Design Award",
       duration: "2023",
-      description:
-        "Received recognition for exceptional portfolio design and implementation, showcasing creative use of modern web technologies and attention to user experience.",
+      description: [
+        "Received recognition for exceptional portfolio design from panel of industry experts",
+        "Implemented innovative UI techniques resulting in 93/100 user experience score",
+        "Featured in Adobe's annual showcase of outstanding web development projects",
+        "Design approach has been adopted as case study material for UX design courses",
+      ],
       icon: Award,
       isLeft: false,
+      logoSrc: "/api/placeholder/40/40", // Use Adobe logo or placeholder
     },
   ];
 
@@ -137,6 +101,8 @@ const Experiences = () => {
               description={exp.description}
               icon={exp.icon}
               isLeft={exp.isLeft}
+              logoSrc={exp.logoSrc}
+              hasWhiteLogoBg={exp.hasWhiteLogoBg}
             />
           ))}
         </div>

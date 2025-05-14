@@ -8,13 +8,10 @@ import {
   FaFigma,
   FaGithub,
   FaBootstrap,
+  FaCss3Alt,
 } from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiVercel,
-  SiPostman,
-} from "react-icons/si";
-import { IoLogoJavascript, IoLogoHtml5 } from "react-icons/io5";
+import { SiTailwindcss, SiVercel, SiPostman, SiJira } from "react-icons/si";
+import { IoLogoJavascript, IoLogoHtml5, IoLogoSass } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
@@ -57,6 +54,7 @@ const Skills = () => {
     },
     { icon: <SiTailwindcss className="text-sky-400" />, name: "Tailwind CSS" },
     { icon: <FaBootstrap className="text-purple-600" />, name: "Bootstrap" },
+    { icon: <FaCss3Alt className="text-blue-500" />, name: "CSS" },
     { icon: <FaFigma className="text-pink-400" />, name: "Figma" },
   ];
 
@@ -73,10 +71,12 @@ const Skills = () => {
       name: "Javascript",
     },
     { icon: <IoLogoHtml5 className="text-orange-500" />, name: "HTML5" },
+    { icon: <IoLogoSass className="text-pink-400" />, name: "Sass" },
+    { icon: <SiJira className="text-blue-600" />, name: "Jira" },
   ];
 
   return (
-    <section className="py-16 relative overflow-hidden w-full">
+    <section id="skills" className="py-16 relative overflow-hidden w-full">
       <div className="absolute inset-0">
         <div
           className="absolute inset-0"
@@ -127,7 +127,7 @@ const Skills = () => {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20, // speed  effect
+                  duration: 40, // speed  effect
                   ease: "linear",
                 },
               }}
@@ -157,7 +157,7 @@ const Skills = () => {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20,
+                  duration: 40,
                   ease: "linear",
                 },
               }}
