@@ -11,61 +11,68 @@ const Experiences = () => {
 
   const experiences = [
     {
-      title: "Google",
-      role: "Senior Frontend Developer",
-      duration: "Jan 2022 - Present",
+      title: "TAN Digital",
+      role: "Junior Frontend Engineer",
+      duration: "May 2024 - Present",
+      location: "BSD, South Tangerang",
       description: [
-        "Led development of responsive web applications using React and Next.js, improving user engagement by 37%",
-        "Implemented advanced UI/UX designs with Tailwind CSS, resulting in 25% reduction in bounce rates",
-        "Collaborated with cross-functional teams to deliver high-quality solutions, meeting 100% of project deadlines",
-        "Optimized application performance, reducing load time by 40% and increasing conversion rates",
+        "Developed user interfaces using Vue.js and typescript, Vuetify, and implemented state management with Pinia",
+        "Migrated the Vuetify framework to ShadCN UI and Tailwind CSS for improved customization and performance",
+        "Translated UI designs and wireframes into responsive web pages",
+        "Collaborated with backend teams to integrate APIs seamlessly",
+        "Conducted functional testing to ensure compliance with requirements and designs",
+        "Utilize version control systems such as Git to manage code changes",
       ],
       icon: Briefcase,
       isLeft: true,
-      logoSrc: "/assets/images/logo_tan_digital-color.png", 
-      hasWhiteLogoBg: true,
+      logoSrc: "/assets/images/logo-tan-digital.png",
     },
     {
-      title: "Meta",
-      role: "Web Developer",
-      duration: "Mar 2020 - Dec 2021",
+      title: "Digital Amoeba - PT. Telkom Indonesia",
+      role: "Frontend Web Developer Intern",
+      duration: "Feb 2023 - Jun 2023",
+      location: "Bandung, West Java",
       description: [
-        "Developed and maintained client websites with 99.9% uptime, serving over 1M monthly users",
-        "Created custom themes and implemented animations that increased user engagement by 28%",
-        "Collaborated with designers to ensure pixel-perfect implementations across all devices",
-        "Implemented responsive designs that improved mobile conversion rates by 45%",
+        "Developed Digital Amoeba Landing Page using library Framer Motion",
+        "Developed Ideabox website as an Idea Crowdsourcing Platform for Idea Innovators for Telkom Employees",
+        "Developed the Ideabox website using React.js, Next.js, Sass (SCSS), and React Bootstrap",
+        "Integrating API from Backend using REST API to fetch and store data",
+        "Implementing UI/UX design wireframes into code",
+        "Work closely with UI/UX team, System Analyst, QA, Backend and Product Owner using Agile Scrum Methodology",
+        "Ensured code consistency through the use of Version Control System using Gitlab",
       ],
       icon: Briefcase,
       isLeft: false,
-      logoSrc: "/api/placeholder/40/40", // Use Meta logo or placeholder
+      logoSrc: "/assets/images/logo-digital-amoeba.png",
     },
     {
-      title: "MIT",
-      role: "Computer Science Degree",
-      duration: "2016 - 2020",
+      title: "Software Engineering Laboratory ",
+      role: "Assistant Lecturer",
+      duration: "Agt 2022 - Jul 2023",
+      location: "Jember, East Java",
       description: [
-        "Graduated with honors (3.92 GPA) in Computer Science with focus on web technologies",
-        "Completed capstone project developing a full-stack application with 10,000+ users",
-        "Participated in 12+ hackathons, winning 'Best Technical Innovation' award twice",
-        "Served as teaching assistant for Advanced Web Development course for 3 semesters",
+        "Tutoring around 97 Students in System Analysis Design and Object Oriented Design course",
+        "Guiding around 120 Students in project and course of Software Development using Agile Scrum Methodology",
+        "Conducting practical sessions and providing support to students in understanding software engineering architecture and design principles",
+      ],
+      icon: Briefcase,
+      isLeft: true,
+      logoSrc: "/assets/images/logo-ryper-lab.png",
+    },
+    {
+      title: "Jember University",
+      role: "Bachelor of Computer Science",
+      duration: "2020 - 2024",
+      location: "Jember, East Java",
+      description: [
+        "Graduated with honors (3.82 GPA) in Computer Science with focus on web technologies",
+        "Completed a thesis on website optimization using code splitting, tree shaking, minification, and third-party script management",
+        "Finalist in the Scientific Writing Contest Contribution of the Young Generation in optimizing Information Technology during the Covid-19 Pandemic",
+        "Teaching assistant for System Analysis & Design, Software Development, and Object-Oriented Design in Software Development courses",
       ],
       icon: GraduationCap,
-      isLeft: true,
-      logoSrc: "/api/placeholder/40/40", // Use MIT logo or placeholder
-    },
-    {
-      title: "Adobe",
-      role: "Best Portfolio Design Award",
-      duration: "2023",
-      description: [
-        "Received recognition for exceptional portfolio design from panel of industry experts",
-        "Implemented innovative UI techniques resulting in 93/100 user experience score",
-        "Featured in Adobe's annual showcase of outstanding web development projects",
-        "Design approach has been adopted as case study material for UX design courses",
-      ],
-      icon: Award,
       isLeft: false,
-      logoSrc: "/api/placeholder/40/40", // Use Adobe logo or placeholder
+      logoSrc: "/assets/images/logo-unej.png",
     },
   ];
 
@@ -86,8 +93,8 @@ const Experiences = () => {
             Professional Experience
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            My journey in the tech industry, highlighting key roles and
-            achievements that have shaped my career.
+            A summary of my journey in the tech industry, showcasing the roles
+            and achievements that have shaped my career
           </p>
         </motion.div>
 
@@ -98,11 +105,11 @@ const Experiences = () => {
               title={exp.title}
               role={exp.role}
               duration={exp.duration}
+              location={exp.location}
               description={exp.description}
               icon={exp.icon}
               isLeft={exp.isLeft}
               logoSrc={exp.logoSrc}
-              hasWhiteLogoBg={exp.hasWhiteLogoBg}
             />
           ))}
         </div>

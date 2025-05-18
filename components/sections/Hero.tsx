@@ -110,9 +110,8 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                  I specialize in building responsive and user-friendly
-                  interfaces with modern frontend technologies like React,
-                  Next.js, and Tailwind CSS.
+                  Detail-oriented Software Engineer dedicated to building
+                  intuitive and high-performance digital experiences.
                 </motion.p>
                 <motion.div
                   className="flex flex-wrap gap-4"

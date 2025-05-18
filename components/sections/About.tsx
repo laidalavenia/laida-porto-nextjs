@@ -40,24 +40,16 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 via-purple-500 to-blue-400 rounded-2xl p-1">
-                <div className="bg-gray-900 h-full w-full rounded-xl overflow-hidden">
-                  {/* Replace with your actual image */}
-                  <div className="w-full h-full bg-gray-800 flex items-center justify-center">
-                    <User size={60} className="text-gray-600" />
-                    {/* Uncomment and use your actual image
-                    <Image
-                      src="/profile.jpg"
-                      alt="Your Name"
-                      fill
-                      className="object-cover"
-                    />
-                    */}
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* image if needed */}
+            {/* <div className="relative w-48 h-48 md:w-64 md:h-64">
+              <Image
+                src="/assets/images/profile.jpg"
+                alt="Profile Picture"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full shadow-lg border-4 border-gradient-to-r from-blue-500 to-purple-500"
+              />
+            </div> */}
           </motion.div>
 
           {/* About Text */}
