@@ -3,6 +3,18 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState, ReactNode } from "react";
 import { createNoise3D } from "simplex-noise";
 
+interface WavyBackgroundProps extends React.HTMLAttributes<HTMLDivElement> {
+  children?: ReactNode;
+  className?: string;
+  containerClassName?: string;
+  colors?: string[];
+  waveWidth?: number;
+  backgroundFill?: string;
+  blur?: number;
+  speed?: "slow" | "fast";
+  waveOpacity?: number;
+}
+
 export const WavyBackground = ({
   children,
   className,
@@ -14,18 +26,7 @@ export const WavyBackground = ({
   speed = "fast",
   waveOpacity = 0.5,
   ...props
-}: {
-  children?: ReactNode;
-  className?: string;
-  containerClassName?: string;
-  colors?: string[];
-  waveWidth?: number;
-  backgroundFill?: string;
-  blur?: number;
-  speed?: "slow" | "fast";
-  waveOpacity?: number;
-  [key: string]: any;
-}) => {
+}: WavyBackgroundProps) => {
   const noise = createNoise3D();
   let w: number,
     h: number,
@@ -47,8 +48,11 @@ export const WavyBackground = ({
   };
 
   const init = () => {
+    if (!canvasRef.current) return;
     canvas = canvasRef.current;
-    ctx = canvas.getContext("2d");
+    const context = canvas.getContext("2d");
+    if (!context) return;
+    ctx = context;
     w = ctx.canvas.width = window.innerWidth;
     h = ctx.canvas.height = window.innerHeight;
     ctx.filter = `blur(${blur}px)`;
