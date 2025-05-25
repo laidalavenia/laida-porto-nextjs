@@ -9,6 +9,7 @@ import { FollowerPointerCard } from "@/components/ui/following-pointer";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
+import WorldMapSection from "@/components/sections/WorldMap";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Experiences />
         <Projects />
         <Contact />
+        <WorldMapSection />
 
         <footer className="py-6 bg-black text-center text-gray-400">
           <p>© {new Date().getFullYear()} Laida Space. All rights reserved.</p>

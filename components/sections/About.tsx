@@ -2,8 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
-import { User, Download, ExternalLink } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -63,15 +62,15 @@ const About = () => {
                 Frontend Developer & UI/UX Enthusiast
               </h3>
               <p className="text-gray-300 mb-4">
-                Hello! I'm a passionate frontend developer with a keen eye for
+                Hello! I&apos;m a passionate frontend developer with a keen eye for
                 creating beautiful, functional, and user-centered digital
-                experiences. With 3+ years of experience in the field, I've
+                experiences. With 3+ years of experience in the field, I&apos;ve
                 worked on various projects ranging from small business websites
                 to large-scale web applications.
               </p>
               <p className="text-gray-300 mb-6">
                 I specialize in JavaScript frameworks like React and Next.js,
-                coupled with modern CSS solutions like Tailwind CSS. I'm
+                coupled with modern CSS solutions like Tailwind CSS. I&apos;m
                 constantly learning and exploring new technologies to stay at
                 the forefront of web development.
               </p>

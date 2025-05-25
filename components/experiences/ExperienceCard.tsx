@@ -11,7 +11,7 @@ interface ExperienceCardProps {
   duration: string;
   location: string;
   description: string | string[];
-  icon: any;
+  icon: React.ElementType;
   isLeft: boolean;
   logoSrc?: string;
 }

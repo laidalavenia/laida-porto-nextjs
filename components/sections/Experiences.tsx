@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ExperienceCard } from "@/components/experiences/ExperienceCard";
-import { Briefcase, GraduationCap, Award } from "lucide-react";
+import { Briefcase, GraduationCap } from "lucide-react";
 
 const Experiences = () => {
   const sectionRef = useRef(null);
