@@ -10,7 +10,13 @@ import {
   FaBootstrap,
   FaCss3Alt,
 } from "react-icons/fa";
-import { SiTailwindcss, SiVercel, SiPostman, SiJira } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiVercel,
+  SiPostman,
+  SiJira,
+  SiTypescript,
+} from "react-icons/si";
 import { IoLogoJavascript, IoLogoHtml5, IoLogoSass } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -56,6 +62,10 @@ const Skills = () => {
     { icon: <FaBootstrap className="text-purple-600" />, name: "Bootstrap" },
     { icon: <FaCss3Alt className="text-blue-500" />, name: "CSS" },
     { icon: <FaFigma className="text-pink-400" />, name: "Figma" },
+    {
+      icon: <SiTypescript className="text-blue-500" />,
+      name: "TypeScript",
+    },
   ];
 
   const skillsRow2 = [

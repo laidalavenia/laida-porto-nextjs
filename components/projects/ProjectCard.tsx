@@ -118,7 +118,7 @@ export const ProjectCard = ({
                   {isWorkProject && companyName ? (
                     <div className="flex items-center gap-1 text-xs text-gray-500">
                       <Building2 size={10} />
-                      <span>Developed at {companyName}</span>
+                      <span>Powered by {companyName}</span>
                     </div>
                   ) : (
                     <div className="flex items-center gap-1 text-xs text-gray-500">
