@@ -86,7 +86,7 @@ const Contact = () => {
       name: "Instagram",
       icon: <Instagram />,
       url: "https://www.instagram.com/laidalav_/",
-      color: "text-sky-400 hover:text-sky-600",
+      color: "text-pink-500 hover:text-pink-600",
     },
     {
       name: "Email Me",
