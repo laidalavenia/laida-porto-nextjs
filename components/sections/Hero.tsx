@@ -10,6 +10,7 @@ import TypingEffect from "@/components/ui/typing-effect";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 // import { FollowerPointerCard } from "@/components/ui/following-pointer";
 
 export default function HeroSection() {
@@ -119,29 +120,37 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1 }}
                 >
-                  <Button
-                    className="group relative bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white flex items-center gap-2 overflow-hidden w-40"
-                    size="lg"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                      View Projects
-                      <ArrowRight
-                        size={18}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
-                    </span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  </Button>
+                  <Link href="#projects">
+                    <Button
+                      className="group relative bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white flex items-center gap-2 overflow-hidden w-40"
+                      size="lg"
+                    >
+                      <span className="relative z-10 flex items-center gap-2">
+                        View Projects
+                        <ArrowRight
+                          size={18}
+                          className="group-hover:translate-x-1 transition-transform"
+                        />
+                      </span>
+                      <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    </Button>
+                  </Link>
 
-                  <Button
-                    variant="outline"
-                    className="text-white border-white hover:bg-white/10 px-6 py-5"
-                    size="lg"
+                  <Link
+                    href="https://docs.google.com/document/d/1QQ1QCXxo_yNO-1G0JFtu_o271VCMbYmz/edit?usp=sharing&ouid=109208308377868326504&rtpof=true&sd=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <span className="flex items-center gap-2">
-                      Download CV <Download size={18} />
-                    </span>
-                  </Button>
+                    <Button
+                      variant="outline"
+                      className="text-white border-white hover:bg-white/10 px-6 py-5"
+                      size="lg"
+                    >
+                      <span className="flex items-center gap-2">
+                        Download CV <Download size={18} />
+                      </span>
+                    </Button>
+                  </Link>
                 </motion.div>
               </motion.div>
 
